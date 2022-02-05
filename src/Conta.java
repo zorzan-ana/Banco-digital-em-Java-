@@ -43,11 +43,6 @@ public abstract class Conta implements IConta {
         saldo += valor;
     }
 
-    @Override
-    public void transferir(double valor, Conta contaDestino) {
-        this.sacar(valor);
-        contaDestino.depositar(valor);
-    }
 
     protected void imprimirInfosComuns() {
         System.out.println(String.format("Titular: %s", this.cliente.getNome()));
